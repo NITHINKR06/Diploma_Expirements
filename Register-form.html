@@ -3,111 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+    <title>Registration Form</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
 
-        .form-container, .display-section {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+#cont{
+    width: 300px;
 
-        h2 {
-            color: #333;
-        }
+}
 
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #555;
-        }
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 16px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-        }
+form {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
 
-        button {
-            background-color: #4caf50;
-            color: #fff;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
+label {
+    display: block;
+    margin-bottom: 5px;
+}
 
-        button:hover {
-            background-color: #45a049;
-        }
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
 
-        .display-section {
-            margin-top: 20px;
-        }
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
 
-        p {
-            margin-bottom: 10px;
-        }
-    </style>
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.display-section {
+    display: none;
+    margin-top: 20px;
+}
+
+.display-section h2 {
+    color: #4caf50;
+}
+
+
+
+</style>
+
+<body>
+    <div>
+        <center>
+            <h1>SDM Polytechnic, Ujire, Belthangady Tq</h1>
+            <h4>Affiliated to AICTE, New Delhi, Registered by DTE</h4>
+        </center>
+    </div>
+
+    <h1 align="center">Registration Form</h1>
+    <center>
+    <form id="cont">
+        <div>
+            <label id="name">Name</label>
+            <input type="text" size="15" name="n1" id="i1" placeholder="Enter your name..." />
+        </div><br />
+
+        <div>
+            <label id="add">Address</label>
+            <textarea rows="5" cols="50" name="n2" id="i2"></textarea><br /><br />
+        </div><br />
+
+        <div>
+            <label id="state">State</label>
+            <select name="n3" id="i3">
+                <option value="KL" selected>Kerala</option>
+                <option value="KA">Karnataka</option>
+                <option value="MH">Maharashtra</option>
+                <option value="GU">Gujarat</option>
+                <option value="AP">Andhra Pradesh</option>
+            </select>
+        </div><br />
+
+        <div>
+            <label id="gen">Gender</label>
+            <input type="radio" name="n4" id="i4" value="m" />Male &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="n4" id="i5" value="f" />Female<br /><br />
+        </div><br />
+
+        <div id="qu">
+            <label id="quali">Qualification</label>
+            <input type="checkbox" value="SSLC" name="n5" id="i6" />SSLC &nbsp; &nbsp; &nbsp;
+            <input type="checkbox" value="PUC" name="n6" id="i7" />PUC &nbsp; &nbsp; &nbsp;
+            <input type="checkbox" value="DIPLOMA" name="n7" id="i8" />DIPLOMA &nbsp; &nbsp; &nbsp;
+            <input type="checkbox" value="BE" name="n8" id="i9" />BE<br /><br />
+        </div><br />
+
+        <div>
+            <label id="upload">Upload Your Photo</label>
+            <input type="file" name="n9" id="i10" />
+        </div><br />
+
+        <button type="button" id="submitForm">Submit</button>
+    </form>
+<br/>
+<br/>
+    <div class="display-section"></div>
+</center>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const formContainer = document.querySelector('.form-container');
+            const form = document.querySelector('form');
             const displaySection = document.querySelector('.display-section');
 
             document.getElementById('submitForm').addEventListener('click', function () {
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const feedback = document.getElementById('feedback').value;
-                const age = document.getElementById('age').value;
+                const name = document.getElementById('i1').value;
+                const address = document.getElementById('i2').value;
+                const state = document.getElementById('i3').value;
+                const gender = document.querySelector('input[name="n4"]:checked') ? document.querySelector('input[name="n4"]:checked').value : '';
+                const qualification = [];
+                document.querySelectorAll('input[name^="n5"]:checked').forEach(function (checkbox) {
+                    qualification.push(checkbox.value);
+                });
 
                 // Display the submitted data
                 displaySection.innerHTML = `
                     <h2>Thank you for your submission, ${name}!</h2>
-                    <p>Age: ${age}</p>
-                    <p>Email: ${email}</p>
-                    <p>Feedback: ${feedback}</p>
+                    <p>Address: ${address}</p>
+                    <p>State: ${state}</p>
+                    <p>Gender: ${gender}</p>
+                    <p>Qualification: ${qualification.join(', ')}</p>
                 `;
 
                 // Hide the form, show the display section
-                formContainer.style.display = 'none';
+                form.style.display = 'none';
                 displaySection.style.display = 'block';
             });
         });
     </script>
-</head>
-<body>
-    <div class="form-container">
-        <h2>Registration & Feedback Form</h2>
-        <label for="name">First Name:</label>
-        <input type="text" id="name" required>
-
-        <label for="name">Age:</label>
-        <input type="text" id="age" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" required>
-
-        <label for="feedback">Feedback:</label>
-        <textarea id="feedback" rows="4" required></textarea>
-
-        <button id="submitForm">Submit</button>
-    </div>
-
-    <div class="display-section"></div>
 </body>
 </html>
