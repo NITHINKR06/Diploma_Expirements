@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .form-container, .display-section {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .display-section {
+            margin-top: 20px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const formContainer = document.querySelector('.form-container');
+            const displaySection = document.querySelector('.display-section');
+
+            document.getElementById('submitForm').addEventListener('click', function () {
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const feedback = document.getElementById('feedback').value;
+                const age = document.getElementById('age').value;
+
+                // Display the submitted data
+                displaySection.innerHTML = `
+                    <h2>Thank you for your submission, ${name}!</h2>
+                    <p>Age: ${age}</p>
+                    <p>Email: ${email}</p>
+                    <p>Feedback: ${feedback}</p>
+                `;
+
+                // Hide the form, show the display section
+                formContainer.style.display = 'none';
+                displaySection.style.display = 'block';
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registration & Feedback Form</h2>
+        <label for="name">First Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="name">Age:</label>
+        <input type="text" id="age" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" rows="4" required></textarea>
+
+        <button id="submitForm">Submit</button>
+    </div>
+
+    <div class="display-section"></div>
+</body>
+</html>
