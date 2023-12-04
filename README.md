@@ -2,6 +2,7 @@
  docker-compase up --
  docker images --
  docker ps --
+ 
 --------------------------------------------------------------------------------------
 # GitHub connection
 
@@ -12,6 +13,7 @@ To add file from pc to github
   git branch -M main --
   git remote and origin your-github-https-address --
   git push -u origin main
+  
 --------------------------------------------------------------------------------------
 # Typescript prg
  tsc -v ----
