@@ -39,9 +39,9 @@ To add file from pc to github
  
 --------------------------------------------------------------------------------------
 
-#AWS EC2 and AWS Amplify
+# AWS EC2 and AWS Amplify
 
- #AWS-EC2
+ # AWS-EC2
  Goto profile --> Your AWS Concole --> Computer--(EC2) --> Click on Instances --> Lanch Instance --> App name (any) --> select Ubuntu --> Free tier eligible (if selected ignore this step) --> Key pairname (cse) --> Click on allow for all hhtps ... --> Lanuch Instance ----->>
 
  Wait untill it run --> Click on Connect ---->>
