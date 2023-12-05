@@ -48,6 +48,9 @@ To add file from pc to github
 
  perform this opration --> pwd --> ls --> mkdir aws --> cd aws --->>>
 
+ # AWS Amplify
+
+ 
 --------------------------------------------------------------------------------------
  
 
