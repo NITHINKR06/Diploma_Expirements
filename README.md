@@ -7,7 +7,7 @@
 
 # GitHub connection
 
-To add file from pc to github 
+To add file from pc to github --------->>>>>>
   git init -->>
   git add . -->>
   git commit -m "message" -->>
