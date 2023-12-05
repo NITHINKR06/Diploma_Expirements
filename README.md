@@ -4,6 +4,7 @@
  docker ps --
  
 --------------------------------------------------------------------------------------
+
 # GitHub connection
 
 To add file from pc to github 
@@ -15,6 +16,7 @@ To add file from pc to github
   git push -u origin main
   
 --------------------------------------------------------------------------------------
+
 # Typescript prg
  tsc -v ----
  node -v ----
@@ -36,7 +38,16 @@ To add file from pc to github
  node app.js
  
 --------------------------------------------------------------------------------------
- 
- 
+
+#AWS EC2 and AWS Amplify
+
+ #AWS-EC2
+ Goto profile --> Your AWS Concole --> Computer--(EC2) --> Click on Instances --> Lanch Instance --> App name (any) --> select Ubuntu --> Free tier eligible (if selected ignore this step) --> Key pairname (cse) --> Click on allow for all hhtps ... --> Lanuch Instance ----->>
+
+ Wait untill it run --> Click on Connect ---->>
+
+ perform this opration --> pwd --> ls --> mkdir aws --> cd aws --->>>
+
+--------------------------------------------------------------------------------------
  
 
