@@ -25,8 +25,8 @@ To add file from pc to github --------->>>>>>
   -git pull origin  ---->>
 
   createing an branch ----->>>
-  -git branch name
-  -git branch
+  -git branch name -->>
+  -git branch -->>
   to change the branch ---->>>
   -git checkout name -->>
 
@@ -34,9 +34,9 @@ To add file from pc to github --------->>>>>>
   next copy the command displayed below and paste ---->>
 
   to delete the branch --->>
-  -git chechout main
-  -git branch
-  -git branch -d sdm
+  -git chechout main -->>
+  -git branch -->>
+  -git branch -d sdm -->>
    
   If this not works try this --->>
   github -->> main --->> view all branchs -->> delete -->> refresh
