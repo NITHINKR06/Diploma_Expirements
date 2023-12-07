@@ -44,9 +44,9 @@ To add file from pc to github --------->>>>>>
 --------------------------------------------------------------------------------------
 
 # Typescript prg
- tsc -v ---->>
+ npx tsc -v ---->>
  node -v ---->>
- npm i -g type script ---->>
+ npm insatll typescript -g ---->>
 
  get-ExecutionPolicy --->>
  set-ExecutionPolicy RemoteSigned --->>
