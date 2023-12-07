@@ -84,5 +84,18 @@ To add file from pc to github --------->>>>>>
  
 --------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------
- 
 
+# CURD operation in mongosh
+
+Goto terminal -->> mongod -->> another terminal -->> mongosh -->>
+-show dbs -->>
+-use FSD -->>
+-db.FSD.insertMany({id:01, name:"pooajry", age:18},{id:02, name:"arjun", age:20},{id:03, name:"jannu", age:19}) -->>
+-db.FSD.find() -->>
+-db.student.drop() -->>
+
+Create an user on MongoDB ---->>>>>
+-db.createUser({user:"nithin", pwd:"CS21025", role:[admin]})
+-db.getUsers()
+-db.dropUser("nithin")
+-db.getUsers()
