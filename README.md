@@ -22,15 +22,15 @@ To add file from pc to github --------->>>>>>
 
   back to vs code -->>
   
-  -git pull origin
+  -git pull origin  ---->>
 
   createing an branch ----->>>
   -git branch name
   -git branch
   to change the branch ---->>>
-  -git checkout name
+  -git checkout name -->>
 
-  -git push -u origin
+  -git push -u origin -->>
   next copy the command displayed below and paste ---->>
 
   to delete the branch --->>
