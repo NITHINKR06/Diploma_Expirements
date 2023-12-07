@@ -9,13 +9,37 @@
 # GitHub connection
 
 To add file from pc to github --------->>>>>>
-  git init -->>
-  git add . -->>
-  git commit -m "message" -->>
-  git branch -M main -->>
-  git branch -->>
-  git remote and origin your-github-https-address -->>
-  git push -u origin main
+  -git init -->>
+  -git add . -->>
+  -git commit -m "message" -->>
+  -git branch -M main -->>
+  -git branch -->>
+  -git remote and origin your-github-https-address -->>
+  -git push -u origin main -->>
+
+  Enter ur username and password  ------->>>>
+  refresh the page and make changes in the html file --->>
+
+  back to vs code -->>
+  
+  -git pull origin
+
+  createing an branch ----->>>
+  -git branch name
+  -git branch
+  to change the branch ---->>>
+  -git checkout name
+
+  -git push -u origin
+  next copy the command displayed below and paste ---->>
+
+  to delete the branch --->>
+  -git chechout main
+  -git branch
+  -git branch -d sdm
+   
+  If this not works try this --->>
+  github -->> main --->> view all branchs -->> delete -->> refresh
   
 --------------------------------------------------------------------------------------
 
