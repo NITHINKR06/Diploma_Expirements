@@ -1,7 +1,8 @@
 # docker
- docker-compase up --
- docker images --
- docker ps --
+
+ docker-compase up -->>
+ docker images -->>
+ docker ps 
  
 --------------------------------------------------------------------------------------
 
@@ -12,6 +13,7 @@ To add file from pc to github --------->>>>>>
   git add . -->>
   git commit -m "message" -->>
   git branch -M main -->>
+  git branch -->>
   git remote and origin your-github-https-address -->>
   git push -u origin main
   
@@ -30,11 +32,11 @@ To add file from pc to github --------->>>>>>
  cd typescript --->>
  code . ----->>
 
- create new file as --->
+ create new file as --->>
  app.ts ----->> console.log("hi") -------->>
 
- in terminal
- tcs app.ts
+ in terminal -->>
+ tcs app.ts -->>
  node app.js
  
 --------------------------------------------------------------------------------------
