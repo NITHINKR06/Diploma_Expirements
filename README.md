@@ -80,5 +80,6 @@ To add file from pc to github --------->>>>>>
  app name (any name) --->> Enviroment (dev) -->> select ur compress file -->> save --->> click on the link output will be displayed
  
 --------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
  
 
