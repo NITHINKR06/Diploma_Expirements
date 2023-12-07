@@ -75,9 +75,9 @@ To add file from pc to github --------->>>>>>
  perform this opration --> pwd --> ls --> mkdir aws --> cd aws --->>>
 
  # AWS Amplify
- write an html program -->> Compress that file html to zip file -->> new-app -->> host web-app -->> Deploy without Git provider -->> Connect
+ write an html program (index.html) -->> Compress that file html to zip file -->> AWS -->> aws amplify -->> new-app -->> host web-app -->> Deploy without Git provider -->> Connect
 
- app name (any name) --->> Enviroment (dev) -->> select ur compress file -->> save
+ app name (any name) --->> Enviroment (dev) -->> select ur compress file -->> save --->> click on the link output will be displayed
  
 --------------------------------------------------------------------------------------
  
