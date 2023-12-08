@@ -101,3 +101,77 @@ const App = () => {
 
 export default App;
 
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.display-section {
+  
+  margin-top: 20px;
+}
+
+.display-section h2 {
+  color: #4caf50;
+}
+
+#id{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+#qu label {
+  display: flex;
+  align-items: center;
+}
+
+
