@@ -32,39 +32,29 @@ export default App;
 
 //useEffect
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-function CounterApp() {
-  const [count, setCount] = useState(0);
+function ClockTimer() {
+  const [time, setTime] = useState(new Date());
 
-  // useEffect to log the count whenever it changes
   useEffect(() => {
-    console.log("Count has been updated:", count);
-  }, [count]);
+    // Update the time every second
+    const intervalId = setInterval(() => {
+      setTime(new Date());
+    }, 1000);
 
-  // Function to handle incrementing the count
-  const handleIncrement = () => {
-    setCount(count + 1);
-  };
+    // Cleanup the interval on component unmount
+    return () => clearInterval(intervalId);
+  }, []); // Empty dependency array ensures the effect runs only once on mount
 
-  // Function to handle decrementing the count
-  const handleDecrement = () => {
-    setCount(count - 1);
-  };
+  const formattedTime = time.toLocaleTimeString();
 
   return (
-    <>
-      <center>
-        <h1>Count: {count}</h1>
-        <button type="button" onClick={handleIncrement}>
-          Increment
-        </button>
-        <button type="button" onClick={handleDecrement}>
-          Decrement
-        </button>
-      </center>
-    </>
+    <div>
+      <h2>Clock Timer</h2>
+      <p>Current Time: {formattedTime}</p>
+    </div>
   );
 }
 
-export default CounterApp;
+export default ClockTimer;
