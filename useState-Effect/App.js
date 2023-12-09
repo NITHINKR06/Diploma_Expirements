@@ -30,7 +30,7 @@ export default function App() {
 
 import React, { useState, useEffect } from 'react';
 
-function ClockTimer() {
+function App() {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
@@ -53,4 +53,4 @@ function ClockTimer() {
   );
 }
 
-export default ClockTimer;
+export default App;
