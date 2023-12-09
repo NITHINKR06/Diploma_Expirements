@@ -2,33 +2,29 @@
 
 import React, { useState } from "react";
 
-function App() {
+export default function App() {
   const [color, setColor] = useState("red");
 
   return (
     <>
-    <center>
-        <h1 style={{ color: color }}>
-            My App color is {color}
-        </h1>
-        <button type="button" onClick={() => setColor("blue")}>
-            Blue
-        </button>
-        <button type="button" onClick={() => setColor("pink")}>
-            Pink
-        </button>
-        <button type="button" onClick={() => setColor("orange")}>
-            Orange
-        </button>
-        <button type="button" onClick={() => setColor("black")}>
-            Black
-        </button>
+      <center>
+        <h1 style={{ backgroundColor: color, color: "white" }}>USE EFFECT</h1>
+        <div style={{ marginTop: "250px" }}>
+          <div
+            style={{ height: "100px", width: "100px", backgroundColor: color }}
+          ></div>
+          <h2>
+            Your fav color : <span style={{ color: color }}>{color}</span>
+          </h2>
+          <button onClick={() => setColor("blue")}>Blue</button>
+          <button onClick={() => setColor("orange")}>Orange</button>
+          <button onClick={() => setColor("black")}>Black</button>
+          <button onClick={() => setColor("green")}>Green</button>
+        </div>
       </center>
     </>
   );
 }
-
-export default App;
 
 //useEffect
 
