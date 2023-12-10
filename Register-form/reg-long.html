@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 50%;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.display-section {
+  
+  margin-top: 20px;
+}
+
+.display-section h2 {
+  color: #4caf50;
+}
+
+#id{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+#qu label {
+  display: flex;
+  align-items: center;
+}
+  </style>
+</head>
+
+<body>
+  <div>
+    <div>
+      <center>
+        <h1>SDM Polytechnic, Ujire, Belthangady Tq</h1>
+        <h4>Affiliated to AICTE, New Delhi, Registered by DTE</h4>
+      </center>
+    </div>
+    <center>
+    <h1 align="center">Registration Form</h1>
+    <div class="display-section" style="display: none;">
+        <div id="displayedPhoto" style="display: none;">
+            <!-- <p>Photo:</p> -->
+            <img id="displayedImage" alt="Uploaded" style="max-width: 100%; max-height: 200px;">
+          </div>
+      <h2>Thank you for your submission, <span id="displayedName"></span>!</h2>
+      <p>Registration Number: <span id="displayedRegNo"></span></p>
+      <p>Address: <span id="displayedAddress"></span></p>
+      <p>Gender: <span id="displayedGender"></span></p>
+      <p>Semester: <span id="displayedSemester"></span></p>
+      
+    </div>
+
+    <form>
+      <div>
+        <label for="i1">Name</label>
+        <input type="text" size="15" name="name" id="i1" placeholder="Enter your name..." onchange="handleInputChange(event)">
+      </div><br>
+
+      <div>
+        <label for="regNo">Reg No:</label>
+        <input type="text" name="regNo" id="regNo" placeholder="Enter registration number..." onchange="handleInputChange(event)">
+      </div><br>
+
+      <div>
+        <label for="i2">Address</label>
+        <textarea rows="5" cols="50" name="address" id="i2" onchange="handleInputChange(event)"></textarea><br>
+      </div><br>
+
+      <div>
+        <label>Gender</label>
+        <input type="radio" name="gender" value="m" onchange="handleInputChange(event)"> Male
+        <input type="radio" name="gender" value="f" onchange="handleInputChange(event)"> Female<br><br>
+      </div><br>
+
+      <div id="qu">
+        <label>Semester</label>
+        <label><input type="radio" value="1" name="semester" onchange="handleInputChange(event)"> 1</label>
+        <label><input type="radio" value="2" name="semester" onchange="handleInputChange(event)"> 2</label>
+        <label><input type="radio" value="3" name="semester" onchange="handleInputChange(event)"> 3</label>
+        <label><input type="radio" value="4" name="semester" onchange="handleInputChange(event)"> 4</label>
+        <label><input type="radio" value="5" name="semester" onchange="handleInputChange(event)"> 5</label>
+        <label><input type="radio" value="6" name="semester" onchange="handleInputChange(event)"> 6</label>
+      </div><br>
+
+      <div>
+        <label for="i10">Upload Your Photo</label>
+        <input type="file" name="photo" id="i10" onchange="handleInputChange(event)">
+      </div><br>
+
+      <button type="button" onclick="handleSubmit()">Submit</button>
+    </form>
+</center>
+  </div>
+
+  <script>
+    function handleInputChange(event) {
+      const { name, value, type } = event.target;
+      const fileInputRef = document.getElementById('i10');
+      const formData = {
+        name: '',
+        regNo: '',
+        address: '',
+        gender: '',
+        semester: '',
+        photo: null,
+      };
+
+      formData[name] = type === 'file' ? fileInputRef.files[0] : value;
+
+      // Update displayed values for testing purposes
+      document.getElementById('displayedName').innerText = formData.name;
+      document.getElementById('displayedRegNo').innerText = formData.regNo;
+      document.getElementById('displayedAddress').innerText = formData.address;
+      document.getElementById('displayedGender').innerText = formData.gender;
+      document.getElementById('displayedSemester').innerText = formData.semester;
+
+      if (formData.photo) {
+        document.getElementById('displayedPhoto').style.display = 'block';
+        document.getElementById('displayedImage').src = URL.createObjectURL(formData.photo);
+      } else {
+        document.getElementById('displayedPhoto').style.display = 'none';
+      }
+    }
+
+    function handleSubmit() {
+      const displaySection = document.querySelector('.display-section');
+      const form = document.querySelector('form');
+      displaySection.style.display = 'block';
+      form.style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>
