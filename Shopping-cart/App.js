@@ -34,10 +34,14 @@ const App = () => {
   //   setCart(updatedCart);
   // };
 
+  
+  //new function <----->
   const removeFromCart = (productId) => {
     const updatedCart = cart.filter((item) => item.id !== productId);
     setCart(updatedCart);
   };
+  // <---->
+
   
   const cartTotal = cart.reduce((total, item) => total + item.price, 0);
 
