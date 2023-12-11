@@ -23,14 +23,19 @@ const App = () => {
     setCart([...cart, product]);
   };
 
+  // const removeFromCart = (productId) => {
+  //   const updatedCart = cart.map((item) =>
+  //     item.id === productId ? { ...item } : item
+  //   );
+  
+  //   const indexToRemove = updatedCart.findIndex((item) => item.id === productId);
+  //   updatedCart.splice(indexToRemove, 1);
+  
+  //   setCart(updatedCart);
+  // };
+
   const removeFromCart = (productId) => {
-    const updatedCart = cart.map((item) =>
-      item.id === productId ? { ...item } : item
-    );
-  
-    const indexToRemove = updatedCart.findIndex((item) => item.id === productId);
-    updatedCart.splice(indexToRemove, 1);
-  
+    const updatedCart = cart.filter((item) => item.id !== productId);
     setCart(updatedCart);
   };
   
